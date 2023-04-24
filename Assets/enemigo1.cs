@@ -53,7 +53,7 @@ public class enemigo1 : MonoBehaviour
             break;
         }
         }else{
-            if(Vector3.Distance(transform.position, target.transform.position)>10&& !atacando){
+            if(Vector3.Distance(transform.position, target.transform.position)> 5&& !atacando){
             var lookPos = target.transform.position - transform.position;
             lookPos.y=0;
             var rotation = Quaternion.LookRotation(lookPos);
@@ -78,9 +78,5 @@ public class enemigo1 : MonoBehaviour
         atacando= false;
     }
 
-    public void OnTriggerEnter(Collider coll){
-        if(coll.CompareTag("arma")){
-            print("Daño");
-        }
-    }
+    
 }

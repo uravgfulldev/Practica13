@@ -36,4 +36,10 @@ public class PlayerMovement : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
     }
+
+    public void OnTriggerEnter(Collider coll){
+        if(coll.CompareTag("arma")){
+            print("Daño");
+        }
+    }
 }
